@@ -48,6 +48,6 @@ jobs:
 
       - name: Deploy to Elastic Beanstalk
         run: |
-          eb init docker-react --platform docker --region ap-south-1
-          eb use DockerReact-env
+          eb init frontend --platform docker --region ap-south-1
+          eb use frontend-env
           eb deploy

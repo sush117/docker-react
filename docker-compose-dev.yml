@@ -1,0 +1,21 @@
+version: '3'
+services:
+    web:
+        build:
+            context: .
+            dockerfile: Dockerfile.dev
+        ports:
+            - "3000:3000"
+        volumes:
+            - /app/node_modules
+            - .:/app
+deploy:
+    provider: elasticbeanstalk
+    region: ap-south-1
+    app: frontend
+    env: frontend-env
+    bucket_name: elasticbeanstalk-ap-south-1-627327986518
+    bucket_path: docker
+    on:
+        branch: master
+            

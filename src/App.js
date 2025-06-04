@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Welcome to the React server!
+          This is a React server created with the help of Elastic Beanstalk and Travis CI.
         </p>
             <a
             className="App-link"
